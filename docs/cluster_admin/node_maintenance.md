@@ -202,7 +202,7 @@ workloads.
 
 !!! note
     This limitation is tracked in
-    [kubevirt/kubevirt#18063](https://github.com/kubevirt/kubevirt/issues/18063). A
+    kubevirt/kubevirt#18063. A
     long-term, platform-level fix is being pursued upstream in
     [kubernetes/kubernetes#139582](https://github.com/kubernetes/kubernetes/issues/139582)
     (teaching the disruption controller to traverse the owner chain to a scalable

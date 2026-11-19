@@ -21,8 +21,8 @@ default behavior:
 - **Beta** features are considered stable enough for broad testing.
   Starting from KubeVirt v1.9, all Beta feature gates are
   **enabled by default**. See
-  [VEP 229: Beta features on by default](https://github.com/kubevirt/enhancements/blob/main/veps/meta-VEPs/229-beta-features-on-by-default/vep.md)
-  and the [blog post](https://kubevirt.io/2026/Beta-Features-On-By-Default-In-v1-9.html)
+  VEP 229: Beta features on by default
+  and the blog post
   for full details.
 - **GA** features are always enabled and cannot be toggled. The
   feature gate itself is considered obsolete at this stage.
@@ -34,7 +34,7 @@ part of every release's artifacts. This JSON file lists every non-GA
 feature gate and its current state (Alpha, Beta, or Deprecated).
 
 You can find it in the
-[release artifacts](https://github.com/kubevirt/kubevirt/releases)
+release artifacts
 for each version, or generate it yourself from a KubeVirt source
 tree:
 
@@ -43,7 +43,7 @@ make feature-gate-report
 ```
 
 The full list of feature gates can also be checked directly from the
-[source code](https://github.com/kubevirt/kubevirt/blob/main/pkg/virt-config/featuregate/active.go).
+source code.
 
 ## How to activate a feature gate
 

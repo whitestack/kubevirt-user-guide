@@ -244,7 +244,7 @@ spec:
 ```
 
 You can find a working example, which uses QEMU's emulated USB storage, under
-[examples/vmi-usb.yaml](https://github.com/kubevirt/kubevirt/blob/main/examples/vmi-usb.yaml).
+examples/vmi-usb.yaml.
 
 
 ### Bundle of USB devices

@@ -1,11 +1,11 @@
 # Containerized Data Importer
 
-The [Containerized Data
-Importer](https://github.com/kubevirt/containerized-data-importer) (CDI)
+The Containerized Data
+Importer (CDI)
 project provides facilities for enabling [Persistent Volume
 Claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
 (PVCs) to be used as disks for KubeVirt VMs by way of
-[DataVolumes](https://github.com/kubevirt/containerized-data-importer/blob/main/doc/datavolumes.md).
+DataVolumes.
 The three main CDI use cases are:
 
 -   Import a disk image from a web server or container registry to a DataVolume
@@ -18,12 +18,12 @@ virtctl in your path.
 
 !!! Note
     You will likely need to configure the Container Runtime Interface (CRI) to handle device ownership through the security context.
-    See the [CDI docs](https://github.com/kubevirt/containerized-data-importer/blob/main/doc/block_cri_ownership_config.md) for more information.
+    See the CDI docs for more information.
 
 ## Install CDI
 
 Install the latest CDI release
-[here](https://github.com/kubevirt/containerized-data-importer/releases)
+here
 
     export TAG=$(curl -s -w %{redirect_url} https://github.com/kubevirt/containerized-data-importer/releases/latest)
     export VERSION=$(echo ${TAG##*/})
@@ -47,7 +47,7 @@ cluster. Here are some ways to do that:
     (not recommended for production clusters)
 
 Look
-[here](https://github.com/kubevirt/containerized-data-importer/blob/main/doc/upload.md)
+here
 for example manifests.
 
 ## Supported image formats

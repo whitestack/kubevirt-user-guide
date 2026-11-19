@@ -323,7 +323,7 @@ Keep the following in mind:
   [Enabling default cluster cpu model](#enabling-default-cluster-cpu-model)).
   KubeVirt does not validate the model name, so a VMI with a model that no
   node supports stays in `Scheduling`
-  ([kubevirt/kubevirt#16854](https://github.com/kubevirt/kubevirt/issues/16854)).
+  (kubevirt/kubevirt#16854).
 
 ### Features
 
@@ -380,8 +380,8 @@ Available options are
 
 -   **timezone**
 
-See the [Clock API
-Reference](https://kubevirt.github.io/api-reference/master/definitions.html#_v1_clock)
+See the Clock API
+Reference
 for all possible configuration options.
 
 #### utc
@@ -471,8 +471,8 @@ A pretty common timer configuration for VMs looks like this:
 `hpet` is disabled,`pit` and `rtc` are configured to use a specific
 `tickPolicy`. Finally, `hyperv` is made available too.
 
-See the [Timer API
-Reference](https://kubevirt.github.io/api-reference/master/definitions.html#_v1_timer)
+See the Timer API
+Reference
 for all possible configuration options.
 
 **Note**: Timer can be part of a machine type. Thus it may be necessary
@@ -705,8 +705,8 @@ spec:
         claimname: myclaim
 ```
 
-See the [Features API
-Reference](https://kubevirt.github.io/api-reference/master/definitions.html#_v1_features)
+See the Features API
+Reference
 for all available features and configuration options.
 
 ## Resources Requests and Limits

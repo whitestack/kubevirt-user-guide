@@ -3,7 +3,7 @@
 When installing a new guest virtual machine OS, it is often useful to boot directly from a kernel and initrd stored in
 the host physical machine OS, allowing command line arguments to be passed directly to the installer.
 
-Booting from an external source is supported in Kubevirt starting from [version v0.42.0-rc.0](https://github.com/kubevirt/kubevirt/releases/tag/v0.42.0-rc.0).
+Booting from an external source is supported in Kubevirt starting from version v0.42.0-rc.0.
 This enables the capability to define a Virtual Machine that will use a custom kernel / initrd binary, with possible
 custom arguments, during its boot process.
 
@@ -60,7 +60,7 @@ arguments will be passed to the default kernel the VM boots from.
 
 
 Booting the kernel with a root file system can be done by specifying the root file system as a
-[disk](https://kubevirt.io/user-guide/storage/disks_and_volumes/) (e.g. containerDisk):
+disk (e.g. containerDisk):
 ```yaml
 apiVersion: kubevirt.io/v1
 kind: VirtualMachine
@@ -121,7 +121,7 @@ Notes:
   example the kernel modules were bundled into a tarball and packaged into an isofs. This isofs is then added to
   the `containerDisk` and unpacked into the root file system with the cloudinit runcmd.
 
-- Following the [containerDisk Workflow Example](https://kubevirt.io/user-guide/storage/disks_and_volumes/#containerdisk-workflow-example),
+- Following the containerDisk Workflow Example,
   we need to add the initramfs, kernel, root file system and kernel modules isofs to our custom-containerdisk:
   ```dockerfile
   FROM scratch

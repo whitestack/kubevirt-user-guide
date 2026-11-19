@@ -15,7 +15,7 @@ level for this entry.
 For example, if the log verbosity for some log entry is `3`, then the log would be exposed only if the log verbosity
 is defined to be equal or greater than `3`, or else it would be filtered out.
 
-Currently, log verbosity can be defined per-component or per-node. The most updated API is detailed [here](https://kubevirt.io/api-reference/master/definitions.html#_v1_logverbosity).
+Currently, log verbosity can be defined per-component or per-node. The most updated API is detailed here.
 
 ### Setting verbosity per KubeVirt component
 One way of raising log verbosity is to manually determine it for the different components in `KubeVirt` CR:

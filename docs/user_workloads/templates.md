@@ -31,16 +31,16 @@ a template are
 -   Size (flavor) Defines the amount of resources (CPU, memory) to
     allocate to the VM.
 
-More documentation is available in the [common templates
-subproject](https://github.com/kubevirt/common-templates)
+More documentation is available in the common templates
+subproject
 
 ### Accessing the virtual machine templates
 
 If you installed KubeVirt using a supported method you should find the
 common templates preinstalled in the cluster. Should you want to upgrade
 the templates, or install them from scratch, you can use one of the
-[supported
-releases](https://github.com/kubevirt/common-templates/releases)
+supported
+releases
 
 To install the templates:
 
@@ -432,7 +432,7 @@ spec:
 ### Overview
 
 The KubeVirt projects provides a set of
-[templates](https://github.com/kubevirt/kubevirt/tree/main/examples) to
+templates to
 create VMs to handle common usage scenarios. These templates provide a
 combination of some key factors that could be further customized and
 processed to have a Virtual Machine object.
@@ -457,7 +457,7 @@ blue button >> choose "Create from wizard". Next, you have to see
 
 ### Common-templates
 
-There is the [common-templates](https://github.com/kubevirt/common-templates/) subproject. It provides official prepared and useful templates. You can also create templates by hand. You can find an example below, in the "Example template" section.
+There is the common-templates subproject. It provides official prepared and useful templates. You can also create templates by hand. You can find an example below, in the "Example template" section.
 
 ### Example template
 
@@ -620,8 +620,8 @@ An OpenShift template has to be converted into the JSON file via
 `oc process` command, that also allows you to set the template
 parameters.
 
-A complete example can be found in the [KubeVirt
-repository](https://raw.githubusercontent.com/kubevirt/kubevirt/main/examples/vm-template-fedora.yaml).
+A complete example can be found in the KubeVirt
+repository.
 
 !> You need to be logged in by `oc login` command.
 

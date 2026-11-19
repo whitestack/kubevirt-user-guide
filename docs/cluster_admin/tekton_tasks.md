@@ -2,8 +2,8 @@
 
 ### Prerequisites
 - [Tekton](https://tekton.dev/)
-- [KubeVirt](https://kubevirt.io/)
-- [CDI](https://github.com/kubevirt/containerized-data-importer)
+- KubeVirt
+- CDI
 
 ## KubeVirt Tekton Tasks 
 ### What are KubeVirt Tekton Tasks?
@@ -13,7 +13,7 @@ KubeVirt-specific Tekton Tasks, which are focused on:
 - Executing commands in VMs
 - Manipulating disk images with libguestfs tools
 
-KubeVirt Tekton Tasks and example Pipelines are available in [artifacthub.io](https://artifacthub.io/packages/search?org=kubevirt&sort=relevance&page=1) from where you can easily deploy them to your cluster.
+KubeVirt Tekton Tasks and example Pipelines are available in artifacthub.io from where you can easily deploy them to your cluster.
 
 ### Existing Tasks
 
@@ -52,12 +52,12 @@ KubeVirt Tekton Tasks and example Pipelines are available in [artifacthub.io](ht
 All these Tasks can be used for creating [Pipelines](https://github.com/tektoncd/pipeline/blob/main/docs/pipelines.md).
 We prepared example Pipelines which show what can you do with the KubeVirt Tasks.
 
-- [Windows efi installer](https://github.com/kubevirt/kubevirt-tekton-tasks/blob/main/release/pipelines/windows-efi-installer/windows-efi-installer.yaml) - This Pipeline will prepare a Windows 10/11/2k22 datavolume with virtio drivers installed. User has to provide a working link to a Windows 10/11/2k22 iso file. The Pipeline is suitable for Windows versions, which requires EFI (e.g. Windows 10/11/2k22). More information about Pipeline can be found [here](https://github.com/kubevirt/kubevirt-tekton-tasks/blob/main/release/pipelines/windows-efi-installer/README.md)
+- Windows efi installer - This Pipeline will prepare a Windows 10/11/2k22 datavolume with virtio drivers installed. User has to provide a working link to a Windows 10/11/2k22 iso file. The Pipeline is suitable for Windows versions, which requires EFI (e.g. Windows 10/11/2k22). More information about Pipeline can be found here
 
-- [Windows customize](https://github.com/kubevirt/kubevirt-tekton-tasks/blob/main/release/pipelines/windows-customize/windows-customize.yaml) - This Pipeline will install a SQL server or a VS Code in a Windows VM. More information about Pipeline can be found [here](https://github.com/kubevirt/kubevirt-tekton-tasks/blob/main/release/pipelines/windows-customize/README.md)
+- Windows customize - This Pipeline will install a SQL server or a VS Code in a Windows VM. More information about Pipeline can be found here
 
 !!! note
     - If you define a different namespace for Pipelines and a different namespace for Tasks, you will have to create a [cluster resolver](https://tekton.dev/docs/pipelines/cluster-resolver/) object. <br />
     - By default, example Pipelines create the resulting datavolume in the `kubevirt-os-images` namespace. <br />
-    - In case you would like to create resulting datavolume in different namespace (by specifying `baseDvNamespace` attribute in Pipeline), additional RBAC permissions will be required (list of all required RBAC permissions can be found [here](https://github.com/kubevirt/kubevirt-tekton-tasks/tree/main/release/tasks/modify-data-object#usage-in-different-namespaces)). <br />
+    - In case you would like to create resulting datavolume in different namespace (by specifying `baseDvNamespace` attribute in Pipeline), additional RBAC permissions will be required (list of all required RBAC permissions can be found here). <br />
     - In case you would like to live migrate the VM while a given Pipeline is running, the following [prerequisities](../operations/live_migration.md#limitations) must be met 

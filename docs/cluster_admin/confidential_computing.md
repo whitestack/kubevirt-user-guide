@@ -147,9 +147,9 @@ For more details please read the [official documentation](https://www.ibm.com/do
 
 ### **FEATURE STATE:**
 
-* Alpha - [`v1.6.0`](https://github.com/kubevirt/kubevirt/releases/tag/v1.6.0)
-* Beta - [`v1.7.0`](https://github.com/kubevirt/kubevirt/releases/tag/v1.7.0)
-* GA - [`v1.9.0`](https://github.com/kubevirt/kubevirt/releases/tag/v1.9.0) (Enabled by default)
+* Alpha - `v1.6.0`
+* Beta - `v1.7.0`
+* GA - `v1.9.0` (Enabled by default)
 
 ### Prerequisites
 

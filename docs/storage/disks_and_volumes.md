@@ -18,8 +18,8 @@ A disk can be made accessible via four different types:
 
 -   [**fileystems**](#filesystems)
 
-All possible configuration options are available in the [Disk API
-Reference](https://kubevirt.github.io/api-reference/master/definitions.html#_v1_disk).
+All possible configuration options are available in the Disk API
+Reference.
 
 All types allow you to specify the `bus` attribute. The `bus` attribute
 determines how the disk will be presented to the guest operating system.
@@ -282,8 +282,8 @@ Supported volume sources are
 
 -   [**downwardMetrics**](#downwardmetrics)
 
-All possible configuration options are available in the [Volume API
-Reference](https://kubevirt.github.io/api-reference/master/definitions.html#_v1_volume).
+All possible configuration options are available in the Volume API
+Reference.
 
 ### cloudInitNoCloud
 
@@ -438,8 +438,8 @@ However, in certain cases like preallocaton or when the disk is thick
 provisioned, the option needs to be disabled. The disk's PVC has to be marked
 with an annotation that contains `/storage.preallocation` or
 `/storage.thick-provisioned`, and set to true. If the volume is preprovisioned
-using [CDI](https://github.com/kubevirt/containerized-data-importer) and the
-[preallocation](https://github.com/kubevirt/containerized-data-importer/blob/main/doc/preallocation.md)
+using CDI and the
+preallocation
 is enabled, then the PVC is automatically annotated with: `cdi.kubevirt.io/storage.preallocation: true`
 and the discard passthrough option is disabled.
 
@@ -645,8 +645,8 @@ VMI, CDI must be installed.
 
 **Installing CDI**
 
-Go to the [CDI release
-page](https://github.com/kubevirt/containerized-data-importer/releases)
+Go to the CDI release
+page
 
 Pick the latest stable release and post the corresponding
 cdi-controller-deployment.yaml manifest to your cluster.
@@ -668,8 +668,8 @@ Currently, only `PersistentVolumeClaim` may be used as a backing store
 of the ephemeral volume.
 
 Up-to-date information on supported backing stores can be found in the
-[KubeVirt
-API](http://kubevirt.io/api-reference/master/definitions.html#_v1_ephemeralvolumesource).
+KubeVirt
+API.
 
 ```yaml
 metadata:

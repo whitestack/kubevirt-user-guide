@@ -11,7 +11,7 @@ Wrapping the QEMU binary in a script is one practical method for debugging QEMU 
 
 The final part that needs to be added is the configuration for Libvirt to use the wrapped script rather than calling the QEMU program directly.
 
-It is possible to alter the generated XML with the help of [KubeVirt sidecars](https://github.com/kubevirt/kubevirt/tree/main/cmd/sidecars). This allows us to use the wrapping script in place of the built-in emulator.
+It is possible to alter the generated XML with the help of KubeVirt sidecars. This allows us to use the wrapping script in place of the built-in emulator.
 
 The primary concept behind this configuration is that all of the additional tools, scripts, and final output files will be stored in a [PerstistentVolumeClaim (PVC)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) that this guide refers to as `debug-tools`. The virt-launcher pod that we wish to debug will have this PVC attached to it.
 
@@ -103,7 +103,7 @@ The image referenced in the `Job` is the image we built in the previous step. On
 
 ## How to start qemu launched by a debugging tool (e.g strace)
 
-This part is achieved by using ConfigMaps and a KubeVirt sidecar (more details in the section [Using ConfigMap to run custom script](https://github.com/kubevirt/kubevirt/tree/main/cmd/sidecars#using-configmap-to-run-custom-script)).
+This part is achieved by using ConfigMaps and a KubeVirt sidecar (more details in the section Using ConfigMap to run custom script).
 
 Configmap:
 ```yaml

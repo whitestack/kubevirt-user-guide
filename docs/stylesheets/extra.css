@@ -1,13 +1,20 @@
-:root, [data-md-color-primary="teal"] {
-  --md-primary-fg-color: #0db2b6;
+/* Whitestack brand: navy bars, orange accent, neutral grays */
+:root {
+  --md-primary-fg-color: #002263;
+  --md-primary-fg-color--light: #1f3f85;
+  --md-primary-fg-color--dark: #00184a;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
+  --md-accent-fg-color: #ec7a3c;
+  --md-typeset-a-color: #c2541a;
 }
 
-:root, [data-md-color-accent="teal"] {
-  --md-accent-fg-color: #006166;
+body[data-md-color-primary] {
+  --md-typeset-a-color: #c2541a;
 }
 
-.md-nav a, .md-typeset a {
-  filter: brightness(80%);
+body[data-md-color-scheme="slate"] {
+  --md-typeset-a-color: #ec7a3c;
 }
 
 .md-tabs__link {
@@ -20,12 +27,12 @@
   text-underline-offset: 8px;
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
+  text-decoration-color: #ec7a3c;
 }
 
 @media screen and (min-width: 76.25em) {
   .md-nav label, .md-nav__item--section > .md-nav__link[for] {
     font-size: 115%;
-    color: #00797f;
   }
 }
 

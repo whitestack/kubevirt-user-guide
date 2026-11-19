@@ -27,7 +27,7 @@
 
   * Describe the roadmap process, how scope is determined for mid to long term features, as well as how the roadmap maps back to current contributions and maintainer ladder?
 
-  The roadmap of the KubeVirt project is shaped by contributions from the community. Prioritized work items are being derived from the community-submitted proposals in the kubevirt/community repo. We also document our [upcoming changes](https://github.com/kubevirt/sig-release/blob/main/upcoming-changes.md) in our sig-release repo to show what will likely be in our next version of KubeVirt.  
+  The roadmap of the KubeVirt project is shaped by contributions from the community. Prioritized work items are being derived from the community-submitted proposals in the kubevirt/community repo. We also document our upcoming changes in our sig-release repo to show what will likely be in our next version of KubeVirt.  
   The enhancement framework provides a standardized way to propose and track features via issues and community reviews.  
   Approved enhancement proposals drive priorities and guide contributions and code reviews.  
   The roadmap supports the maintainer ladder by giving contributors opportunities to grow through impactful work on governance, prioritized features, encouraging new contributors, and review efforts.
@@ -137,7 +137,7 @@
   KubeVirt works from single-node setup all the way up to large scale Kubernetes clusters with hundreds of nodes.  
   For production workloads, the primary requirement is to provide bare metal nodes.  
 
-  All the details can be found at [KubeVirt Installation Guide](https://kubevirt.io/user-guide/cluster_admin/installation/)
+  All the details can be found at KubeVirt Installation Guide
 
 * Define any specific service dependencies the project relies on in the cluster.  
 
@@ -150,7 +150,7 @@
 
 * Describe how the project has addressed sovereignty.  
 
-  KubeVirt depends on the Kubernetes community but operates an independent community outside of the Kubernetes SIGs. This includes but is not limited to its own [SIG/Subproject/WG structure](https://github.com/kubevirt/community/blob/main/sig-list.md).
+  KubeVirt depends on the Kubernetes community but operates an independent community outside of the Kubernetes SIGs. This includes but is not limited to its own SIG/Subproject/WG structure.
 
 * Describe any compliance requirements addressed by the project.  
 
@@ -191,11 +191,11 @@
 
   * Describe any new or changed API types and calls - including to cloud providers - that will result from this project being enabled and used  
 
-    Most KubeVirt APIs are Kubernetes API extensions (CRDs). They are documented at [KubeVirt API Reference](http://kubevirt.io/api-reference/)
+    Most KubeVirt APIs are Kubernetes API extensions (CRDs). They are documented at KubeVirt API Reference
 
   * Describe compatibility of any new or changed APIs with API servers, including the Kubernetes API server  
 
-    Compatibility is provided in [KubeVirt Kubernetes Compatibility](https://github.com/kubevirt/kubevirt/blob/main/docs/kubernetes-compatibility.md)
+    Compatibility is provided in KubeVirt Kubernetes Compatibility
 
   * Describe versioning of any new or changed APIs, including how breaking changes are handled  
 
@@ -206,7 +206,7 @@
 
 * Describe the project’s release processes, including major, minor and patch releases.  
 
-  The release process is described in [KubeVirt Release Guide](https://github.com/kubevirt/kubevirt/blob/main/docs/release.md)
+  The release process is described in KubeVirt Release Guide
 
 
 ### Installation
@@ -227,7 +227,7 @@
 
 * Please provide a link to the project’s cloud native [security self assessment](https://github.com/cncf/tag-security/blob/main/community/assessments/guide/self-assessment.md).
 
-  The self assessment is in progress and tracked at [https://github.com/kubevirt/community/issues/335](https://github.com/kubevirt/community/issues/335).  
+  The self assessment is in progress and tracked at https://github.com/kubevirt/community/issues/335.  
   This document will be updated pointing to the self-assessment once it is completed.
 
 * Please review the [Cloud Native Security Tenets](https://github.com/cncf/tag-security/blob/main/security-whitepaper/secure-defaults-cloud-native-8.md) from TAG Security.
@@ -239,7 +239,7 @@
     Possible link: [Cloud Native Principles](https://github.com/cloud-native-principles/cloud-native-principles/blob/master/cloud-native-principles.md)
 
   * How do you recommend users alter security defaults in order to "loosen" the security of the project? Please link to any documentation the project has written concerning these use cases.  
-    [KubeVirt Security Fundamentals](https://kubevirt.io/2020/KubeVirt-Security-Fundamentals.html)
+    KubeVirt Security Fundamentals
 
 ### Security Hygiene
 
@@ -263,7 +263,7 @@
   “In KubeVirt both our CA and certificates are rotated on a user-defined recurring interval.  
   In the event that either the CA key or a certificate is compromised, this information will eventually be rendered stale and unusable regardless of whether the compromise is known or not.  
   If the compromise is known, a forced CA and certificate rotation can be invoked by the cluster admin simply by deleting the corresponding secrets in the KubeVirt install namespace.”  
-  - [KubeVirt Security Fundamentals](https://kubevirt.io/2020/KubeVirt-Security-Fundamentals.html)
+  - KubeVirt Security Fundamentals
 
 * Describe how the project is following and implementing [secure software supply chain best practices](https://project.linuxfoundation.org/hubfs/CNCF_SSCP_v1.pdf)  
   While there is no active work by the community to implement SSSC best practices, there are recurring discussions of how to get this on track.

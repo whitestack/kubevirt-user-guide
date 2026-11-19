@@ -270,7 +270,7 @@ spec:
 
 Sidecar launcher hooks and node hooks communicate via gRPC. The proto definitions
 can be found at
-[`pkg/hooks/plugins/v1alpha1/api.proto`](https://github.com/kubevirt/kubevirt/blob/main/pkg/hooks/plugins/v1alpha1/api.proto)
+`pkg/hooks/plugins/v1alpha1/api.proto`
 in the KubeVirt repository.
 
 - **Launcher hooks** implement the `LauncherHookService`, with one RPC per hook point:
@@ -285,4 +285,4 @@ A sidecar only needs to implement the RPCs for the hook points listed in its
 ## Related
 
 - [Hook Sidecar Container](../user_workloads/hook-sidecar.md) - legacy mechanism (deprecated).
-- [VEP 190](https://github.com/kubevirt/enhancements/blob/main/veps/sig-compute/190-kubevirt-structured-plugins/vep.md) - design details.
+- VEP 190 - design details.

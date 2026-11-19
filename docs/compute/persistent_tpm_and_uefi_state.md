@@ -53,7 +53,7 @@ spec:
 ```
 
 
-In order for the persistent tpm volume to be created successfully you must ensure your storage classes and [storage profiles](https://github.com/kubevirt/containerized-data-importer/blob/main/doc/storageprofile.md) are configured correctly.  
+In order for the persistent tpm volume to be created successfully you must ensure your storage classes and storage profiles are configured correctly.  
 The persistent tpm volume will be created with the below access mode if one of the constraints for the access mode is true.
 
 * RWX (ReadWriteMany):

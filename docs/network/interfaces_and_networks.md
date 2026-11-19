@@ -14,10 +14,10 @@ connected to.
 There are multiple ways of configuring an `interface` as well as a
 `network`.
 
-All possible configuration options are available in the [Interface API
-Reference](https://kubevirt.io/api-reference/master/definitions.html#_v1_interface)
-and [Network API
-Reference](https://kubevirt.io/api-reference/master/definitions.html#_v1_network).
+All possible configuration options are available in the Interface API
+Reference
+and Network API
+Reference.
 
 ## Networks
 
@@ -131,7 +131,7 @@ Some secondary network configurations use the `k8s.v1.cni.cncf.io/resourceName`
 is required on the node. Common use cases include:
 
 - **SR-IOV** — NADs reference SR-IOV VF resources (e.g. `intel.com/sriov_net`).
-- **Bridge networks with [bridge-marker](https://github.com/kubevirt/bridge-marker)** — NADs reference bridge device resources.
+- **Bridge networks with bridge-marker** — NADs reference bridge device resources.
 - **[Macvtap](../network/net_binding_plugins/macvtap.md)** — NADs reference macvtap device resources (e.g. `macvtap.network.kubevirt.io/eth0`).
 
 For these use cases, the [network-resources-injector](https://github.com/k8snetworkplumbingwg/network-resources-injector)
@@ -221,7 +221,7 @@ guarantees and characteristics.
 
 The mandatory interface configuration includes:
 - A `name`, which references a network name 
-- The name of supported network core binding from the table below, or a reference to a [network binding plugin](https://kubevirt.io/user-guide/network/network_binding_plugins/).
+- The name of supported network core binding from the table below, or a reference to a network binding plugin.
 
 | Type           | Description                                                               |
 |----------------|---------------------------------------------------------------------------|
@@ -319,7 +319,7 @@ Declare ports to forward to the virtual machine guest.
 > **Note:**  
 > The `ports` attribute is only evaluated by specific network bindings, namely the masquerade and the passt core network bindings.  
 > In the bridge network binding, it has no effect. For network binding plugins, its behavior depends on the plugin implementation.  
-> See the network binding plugin [documentation](https://kubevirt.io/user-guide/network/network_binding_plugins/) for details.
+> See the network binding plugin documentation for details.
 
 If `spec.domain.devices.interfaces` is omitted, the virtual machine is
 connected using the default pod network interface of `bridge` type. If
@@ -788,9 +788,9 @@ aforementioned CNIs require the pod interface to have the original MAC address.
 
 These issues are tracked individually:
 
-- [macvlan](https://github.com/kubevirt/kubevirt/issues/5483)
+- macvlan
 
-- [ipvlan](https://github.com/kubevirt/kubevirt/issues/7001)
+- ipvlan
 
 Feel free to discuss and / or propose fixes for them; we'd like to have
 these plugins as valid options on our ecosystem.

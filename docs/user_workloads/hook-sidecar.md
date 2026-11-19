@@ -25,16 +25,16 @@ sidecar hooks:
 [Activating feature gates](../cluster_admin/activating_feature_gates.md).
 
 In case of a development cluster created using kubevirtci, follow the steps mentioned in the 
-[developer doc](https://github.com/kubevirt/kubevirt/blob/main/docs/getting-started.md#compile-and-run-it) to enable 
+developer doc to enable 
 the feature gate.
 
 ## Sidecar-shim container image
 
-To run a VM with custom modifications, the [sidecar-shim-image](https://quay.io/repository/kubevirt/sidecar-shim) 
+To run a VM with custom modifications, the sidecar-shim-image 
 takes care of implementing the communication with the main container.
 
 The image contains the `sidecar-shim` binary built using
-[`sidecar_shim.go`](https://github.com/kubevirt/kubevirt/blob/main/cmd/sidecars/sidecar_shim.go) which should be kept
+`sidecar_shim.go` which should be kept
 as the entrypoint of the container. This binary will search in `$PATH` for binaries named after the hook names (e.g
 `onDefineDomain` and `preCloudInitIso`) and run them. Users must provide the necessary arguments as command line options
 (flags).
@@ -58,11 +58,11 @@ among Shell or Python, for the purpose of this guide, we will use those as examp
 ### Go binary
 
 Example Go code modifiying the [SMBIOS system
-information](https://libvirt.org/formatdomain.html#smbios-system-information) can be found in the [KubeVirt
-repo](https://github.com/kubevirt/kubevirt/tree/main/cmd/sidecars/smbios). Binary generated from this code, when
+information](https://libvirt.org/formatdomain.html#smbios-system-information) can be found in the KubeVirt
+repo. Binary generated from this code, when
 available under `/usr/bin/ondefinedomain` in the sidecar-shim-image, is run right before VMI creation and the baseboard
 manufacturer value is modified to reflect what's provided in the `smbios.vm.kubevirt.io/baseBoardManufacturer`
-annotation in [VMI spec](https://github.com/kubevirt/kubevirt/blob/main/examples/vmi-with-sidecar-hook.yaml).
+annotation in VMI spec.
 
 ### Shell or Python script
 
@@ -133,8 +133,8 @@ data:
         main(sys.argv[4])
 ```
 
-After creating one of the above ConfigMap, create the VMI using the manifest in [this
-example](https://github.com/kubevirt/kubevirt/blob/main/examples/vmi-with-sidecar-hook-configmap.yaml). Of importance
+After creating one of the above ConfigMap, create the VMI using the manifest in this
+example. Of importance
 here is the ConfigMap information stored in the annotations:
 
 ```yaml

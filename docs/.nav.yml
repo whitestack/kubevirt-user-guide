@@ -1,5 +1,4 @@
 nav:
-  - Welcome: index.md
   - Architecture: architecture
   - Quickstarts: quickstarts.md
   - Cluster Administration: cluster_admin

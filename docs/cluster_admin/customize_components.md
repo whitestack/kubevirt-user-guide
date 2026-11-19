@@ -6,7 +6,7 @@
 
 > :warning: If the patch created is invalid KubeVirt will not be able to update or deploy the system. This is intended for special use cases and should not be used unless you know what you are doing.
 
-Valid resource types are: Deployment, DaemonSet, Service, ValidatingWebhookConfiguraton, MutatingWebhookConfiguration, APIService, and CertificateSecret. More information can be found in the [API spec](http://kubevirt.io/api-reference/master/definitions.html#_v1_customizecomponentspatch).
+Valid resource types are: Deployment, DaemonSet, Service, ValidatingWebhookConfiguraton, MutatingWebhookConfiguration, APIService, and CertificateSecret. More information can be found in the API spec.
 
 
 Example customization patch:
@@ -40,7 +40,7 @@ The above example will update the `virt-controller` deployment to have an annota
 > :warning: If the flags are invalid or become invalid on update the component will not be able to run
 
 
-By using the customize flag option, whichever component the flags are to be applied to, all default flags will be removed and only the flags specified will be used. The available resources to change the flags on are `api`, `controller` and `handler`. You can find our more details about the API in the [API spec](http://kubevirt.io/api-reference/master/definitions.html#_v1_flags).
+By using the customize flag option, whichever component the flags are to be applied to, all default flags will be removed and only the flags specified will be used. The available resources to change the flags on are `api`, `controller` and `handler`. You can find our more details about the API in the API spec.
 
 ```yaml
 apiVersion: kubevirt.io/v1

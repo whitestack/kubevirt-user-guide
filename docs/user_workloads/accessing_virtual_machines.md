@@ -173,7 +173,7 @@ Please note that new Secrets cannot be attached to a running VM: You must restar
 >
 > Note: More information about the motivation behind the access credentials API
 > can be found in the
-> [pull request description](https://github.com/kubevirt/kubevirt/pull/4195)
+> pull request description
 > that introduced the API.
 
 In the example below the `Secret` containing the SSH public key is

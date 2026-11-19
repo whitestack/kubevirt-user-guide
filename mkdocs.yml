@@ -1,5 +1,5 @@
 site_name: KubeVirt user guide
-site_url: https://kubevirt.io/user-guide
+site_url: https://customers.whitestack.com/kubevirt-user-guide/
 site_description: Documentation for KubeVirt
 docs_dir: docs
 site_dir: site
@@ -10,6 +10,7 @@ plugins:
   - awesome-nav
   - redirects:
       redirect_maps:
+         'index.md': 'architecture/architecture.md'
          'architecture.md': 'architecture/architecture.md'
          'operations/customize_components.md': 'cluster_admin/customize_components.md'
          'operations/installation.md': 'cluster_admin/installation.md'
@@ -112,16 +113,16 @@ theme:
   palette:
     # Palette toggle for light mode
     - scheme: default
-      primary: teal
-      accent: teal
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
 
     # Palette toggle for dark mode
     - scheme: slate
-      primary: teal
-      accent: teal
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode

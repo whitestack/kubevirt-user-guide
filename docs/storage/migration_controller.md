@@ -1,6 +1,6 @@
 # KubeVirt Migration Controller
 
-The [KubeVirt Migration Controller](https://github.com/kubevirt/kubevirt-migration-controller) project provides a set of APIs that facilitate bulk storage live migration operations. This enables you to live migrate multiple virtual machine disks to a common destination storage class.
+The KubeVirt Migration Controller project provides a set of APIs that facilitate bulk storage live migration operations. This enables you to live migrate multiple virtual machine disks to a common destination storage class.
 
 ## Prerequisites 
 Your KubeVirt environment must have the [Containerized Data Importer (CDI)](../storage/containerized_data_importer.md) installed to use persistent disks.

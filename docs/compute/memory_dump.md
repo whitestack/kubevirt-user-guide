@@ -70,7 +70,7 @@ For downloading the last memory dump from the PVC associated with the VM, withou
 $ virtctl memory-dump download myvm --output=memoryDump.dump.gz
 ```
 
-For downloading a memory dump from a PVC already disassociated from the VM you can use the [virtctl vmexport command](https://github.com/kubevirt/user-guide/blob/main/docs/operations/export_api.md)
+For downloading a memory dump from a PVC already disassociated from the VM you can use the virtctl vmexport command
 
 ### Monitoring the memory dump
 Information regarding the memory dump process will be available on the VM's status section

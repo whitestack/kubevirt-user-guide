@@ -71,7 +71,7 @@ PRIVACY_POLICY_URL="https://fedoraproject.org/wiki/Legal:PrivacyPolicy"
 VARIANT="Cloud Edition"
 VARIANT_ID=cloud
 ```
-2. Add users (for example after the disk has been imported using [CDI](https://github.com/kubevirt/containerized-data-importer))
+2. Add users (for example after the disk has been imported using CDI)
 ```bash
 bash-5.0# virt-customize -a disk.img --run-command 'useradd -m test-user -s /bin/bash' --password  'test-user:password:test-password'
 [   0.0] Examining the guest ...

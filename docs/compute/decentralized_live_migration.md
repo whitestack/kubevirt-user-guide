@@ -24,7 +24,7 @@ Figure 1:
 
 **Storage live migrations**
 
-Storage live migrations, a variation of compute live migrations, involve copying the virtual machine's state and disk contents over the migration network. More information on initiating a storage live migration can be found in this [document](https://kubevirt.io/user-guide/storage/volume_migration/).
+Storage live migrations, a variation of compute live migrations, involve copying the virtual machine's state and disk contents over the migration network. More information on initiating a storage live migration can be found in this document.
 
 **Decentralized live migrations**
 

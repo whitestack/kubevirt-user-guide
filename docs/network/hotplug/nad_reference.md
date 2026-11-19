@@ -15,7 +15,7 @@ This feature is useful when a VM needs to be moved between networks (e.g., diffe
 To use this feature, the following requirements must be met:
 
 - The VM must be live-migratable
-- The `LiveUpdateNADRef` [feature-gate](https://kubevirt.io/user-guide/operations/activating_feature_gates/#how-to-activate-a-feature-gate) must be enabled (only required for v1.8)
+- The `LiveUpdateNADRef` feature-gate must be enabled (only required for v1.8)
 - The target NetworkAttachmentDefinition must exist
 
 ## Process of updating NAD Reference on a Running VM

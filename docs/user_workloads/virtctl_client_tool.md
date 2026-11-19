@@ -19,8 +19,8 @@ It also provides convenience commands for:
 There are two ways to get it:
 
 -   the most recent version of the tool can be retrieved from the
-    [official release
-    page](https://github.com/kubevirt/kubevirt/releases)
+    official release
+    page
 
 -   it can be installed as a `kubectl` plugin using
     [krew](https://krew.dev/)

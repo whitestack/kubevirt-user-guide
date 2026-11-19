@@ -1,17 +1,17 @@
 # Deploy common-instancetypes
 
-The [`kubevirt/common-instancetypes`](https://github.com/kubevirt/common-instancetypes) provide a set of [instancetypes and preferences](../user_workloads/instancetypes.md) to help create KubeVirt [`VirtualMachines`](http://kubevirt.io/api-reference/main/definitions.html#_v1_virtualmachine).
+The `kubevirt/common-instancetypes` provide a set of [instancetypes and preferences](../user_workloads/instancetypes.md) to help create KubeVirt `VirtualMachines`.
 
 Beginning with the 1.1 release of KubeVirt, cluster wide resources can be deployed directly through KubeVirt, without another operator.
 This allows deployment of a set of default instancetypes and preferences along side KubeVirt.
 
-With the [`v1.4.0`](https://github.com/kubevirt/kubevirt/releases/tag/v1.4.0) release of KubeVirt, common-instancetypes are now deployed by default.
+With the `v1.4.0` release of KubeVirt, common-instancetypes are now deployed by default.
 
 ## **FEATURE STATE:**
 
-* Alpha - [`v1.1.0`](https://github.com/kubevirt/kubevirt/releases/tag/v1.1.0)
-* Beta - [`v1.2.0`](https://github.com/kubevirt/kubevirt/releases/tag/v1.2.0)
-* GA - [`v1.4.0`](https://github.com/kubevirt/kubevirt/releases/tag/v1.4.0) (Enabled by default)
+* Alpha - `v1.1.0`
+* Beta - `v1.2.0`
+* GA - `v1.4.0` (Enabled by default)
 
 ## Control deployment of common-instancetypes
 
@@ -25,7 +25,7 @@ kubectl patch -n kubevirt kv/kubevirt --type merge -p '{"spec":{"configuration":
 
 For customization purposes or to install namespaced resources, common-instancetypes can also be deployed by hand.
 
-To install all resources provided by the [`kubevirt/common-instancetypes`](https://github.com/kubevirt/common-instancetypes) project without further customizations, simply apply with [`kustomize`](https://kustomize.io/) enabled (-k flag):
+To install all resources provided by the `kubevirt/common-instancetypes` project without further customizations, simply apply with [`kustomize`](https://kustomize.io/) enabled (-k flag):
 
 ```shell
 kubectl apply -k https://github.com/kubevirt/common-instancetypes.git

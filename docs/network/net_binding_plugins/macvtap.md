@@ -21,12 +21,12 @@ Its main benefits are:
 
 ### Known Issues
 
-- Live migration is not fully supported, see [issue #5912](https://github.com/kubevirt/kubevirt/issues/5912#issuecomment-888938920)
+- Live migration is not fully supported, see issue #5912
 
 > **Warning**: On [KinD](https://github.com/kubernetes-sigs/kind) clusters,
-> the user needs to [adjust the cluster configuration](https://github.com/kubevirt/macvtap-cni/issues/39#issuecomment-1242765996),
+> the user needs to adjust the cluster configuration,
 mounting `dev` of the running host onto the KinD nodes, because of a
-[known issue](https://github.com/kubevirt/macvtap-cni/issues/39).
+known issue.
 
 ### Deployment
 
@@ -42,11 +42,11 @@ In order to use `macvtap`, the following points need to be covered:
 #### Macvtap CNI and DP deployment on nodes
 
 To simplify the procedure, use the
-[Cluster Network Addons Operator](https://github.com/kubevirt/cluster-network-addons-operator#macvtap)
+Cluster Network Addons Operator
 to deploy and configure the macvtap components in your cluster.
 
 The aforementioned operator effectively deploys the
-[macvtap](https://github.com/kubevirt/macvtap-cni) cni and device plugin.
+macvtap cni and device plugin.
 
 #### Expose node interface to the macvtap device plugin
 
@@ -58,7 +58,7 @@ exposed to the user, enabling them to create macvtap interfaces on top of:
 
 Both options are configured via the `macvtap-deviceplugin-config` ConfigMap,
 and more information on how to configure it can be found in the
-[macvtap-cni](https://github.com/kubevirt/macvtap-cni#deployment) repo.
+macvtap-cni repo.
 
 This is a minimal example, in which the `eth0` interface of the Kubernetes
 nodes is exposed, via the `lowerDevice` attribute.
@@ -127,7 +127,7 @@ exposed host interface (via the `lowerDevice` attribute, on the
 
 The macvtap binding plugin consists of the following components:
 
-- [Macvtap CNI plugin](https://github.com/kubevirt/macvtap-cni).
+- Macvtap CNI plugin.
 
 The plugin needs to:
 

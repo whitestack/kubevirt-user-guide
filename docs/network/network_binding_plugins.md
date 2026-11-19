@@ -199,7 +199,7 @@ Supported migration method types:
    It can be useful to renew the DHCP lease.
 
 > **Note**: In some deployments the Kubevirt CR is controlled by an external
-> controller (e.g. [HCO](https://github.com/kubevirt/hyperconverged-cluster-operator)).
+> controller (e.g. HCO).
 > In such cases, make sure to configure the wrapper operator/controller so the
 > changes will get preserved.
 
@@ -229,7 +229,7 @@ derived from virtual machines using the plugin.
 > **Note**: At the moment, only memory overhead requests are supported.
 
 > **Note**: In some deployments the Kubevirt CR is controlled by an external
-> controller (e.g. [HCO](https://github.com/kubevirt/hyperconverged-cluster-operator)).
+> controller (e.g. HCO).
 > In such cases, make sure to configure the wrapper operator/controller so the
 > changes will get preserved.
 

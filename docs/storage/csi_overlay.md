@@ -9,7 +9,7 @@ VM State PVCs currently only need to store a small amount of data, on the order 
 
 The solution to this is to deploy a modified version of the Hostpath Provisioner (HPP) that will be "overlayed" atop a RWX Filesystem capable storage provider (such as NFS). 
 
-We can achieve this overlay by leveraging HPP's [PVCTemplate storage pool](https://github.com/kubevirt/hostpath-provisioner-operator?tab=readme-ov-file#custom-resource-with-pvctemplate-storage-pool). This allows us to define a storage pool that uses a single RWX shared PVC. The underlying storage provider will create the RWX PVC at a network share location and the HPP operator will mount this volume on each node in the cluster. 
+We can achieve this overlay by leveraging HPP's PVCTemplate storage pool. This allows us to define a storage pool that uses a single RWX shared PVC. The underlying storage provider will create the RWX PVC at a network share location and the HPP operator will mount this volume on each node in the cluster. 
 Once the storage pool is set up, any new volumes using this setup will be provisioned by HPP and the resulting PVC will be created as a directory on top of the network share allowing it to be accessed on any node.
 
 This allows VM State PVCs to bypass the minimum PVC size requirements imposed by some storage provisioners and eliminates the need to recreate these PVCs during a VM migration.

@@ -47,7 +47,7 @@ Install the [dra-driver-nvidia-gpu](https://github.com/kubernetes-sigs/dra-drive
 
 For installation details, see the [installation guide](https://dra-driver-nvidia-gpu.sigs.k8s.io/docs/install/).
 
-For enabling GPU passthrough support in the DRA driver, see the [KubeVirt VFIO GPU passthrough guide](https://dra-driver-nvidia-gpu.sigs.k8s.io/docs/guides/kubevirt-vfio-gpu-passthrough/).
+For enabling GPU passthrough support in the DRA driver, see the KubeVirt VFIO GPU passthrough guide.
 
 ## Creating a ResourceClaimTemplate
 
@@ -56,7 +56,7 @@ Replace `vfio.gpu.nvidia.com` with the `DeviceClass` name published by your driv
 
 When using the DRA driver for NVIDIA GPUs for KubeVirt passthrough, include the opaque `VfioDeviceConfig` block below.
 The NVIDIA driver does not inject the VFIO API device by default.
-See the [VfioDeviceConfig](https://dra-driver-nvidia-gpu.sigs.k8s.io/docs/guides/kubevirt-vfio-gpu-passthrough/#vfiodeviceconfig-parameters) parameters in the driver guide for more details.
+See the VfioDeviceConfig parameters in the driver guide for more details.
 
 ```yaml
 apiVersion: resource.k8s.io/v1

@@ -2,8 +2,8 @@
 
 **FEATURE STATE:**
 
-* `template.kubevirt.io/v1alpha1` (Alpha) as of the [
-  `v1.8.0`](https://github.com/kubevirt/kubevirt/releases/tag/v1.8.0) KubeVirt
+* `template.kubevirt.io/v1alpha1` (Alpha) as of the 
+  `v1.8.0` KubeVirt
   release
 * `template.kubevirt.io/v1beta1` (Beta) as of the `v1.9.0` KubeVirt release
 
@@ -452,6 +452,6 @@ The OCI artifact contains the template spec and all associated volume data.
 
 Native OCI import is planned for a future release (>= v1.10.0). In the
 meantime, the
-[`hack/oci-import.sh`](https://github.com/kubevirt/kubevirt/blob/main/hack/oci-import.sh)
+`hack/oci-import.sh`
 script can be used to import an exported template.
 

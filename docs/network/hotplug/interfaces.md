@@ -9,11 +9,11 @@ Release:
 KubeVirt supports hotplugging and unplugging network interfaces into a running Virtual Machine (VM). 
 
 Hotplug is supported for interfaces using the `virtio` model connected through
-[bridge binding](http://kubevirt.io/api-reference/main/definitions.html#_v1_interfacebridge) 
-or [SR-IOV binding](http://kubevirt.io/api-reference/main/definitions.html#_v1_interfacesriov).
+bridge binding 
+or SR-IOV binding.
 
 Hot-unplug is supported only for interfaces connected through
-[bridge binding](http://kubevirt.io/api-reference/main/definitions.html#_v1_interfacebridge).
+bridge binding.
 
 ## Requirements
 Adding an interface to a KubeVirt Virtual Machine requires first an interface
@@ -27,7 +27,7 @@ to be added to a running pod. This is not trivial, and has some requirements:
   on demand.
 
 > **Note**: For older Kubevirt versions (from v1.1 until v1.3), the
-> `HotplugNICs` [feature-gate](https://kubevirt.io/user-guide/operations/activating_feature_gates/#how-to-activate-a-feature-gate))
+> `HotplugNICs` feature-gate)
 > must be enabled.
 > From Kubevirt v1.4, the FG is not needed and should be removed if set.
 
@@ -158,7 +158,7 @@ and
 [Multus Dynamic Networks controller](https://github.com/k8snetworkplumbingwg/multus-dynamic-networks-controller), 
 it's possible to hotplug an interface by migrating the VM.
 
-> ⚠️ **Note**: As of KubeVirt v1.5 ([kubevirt/kubevirt#13497](https://github.com/kubevirt/kubevirt/issues/13497)), namespace administrators are **not allowed to create VMIMs** (VirtualMachineInstanceMigrations) by default. Migration-based hotplug requires this permission. A cluster-admin must explicitly grant it.
+> ⚠️ **Note**: As of KubeVirt v1.5 (kubevirt/kubevirt#13497), namespace administrators are **not allowed to create VMIMs** (VirtualMachineInstanceMigrations) by default. Migration-based hotplug requires this permission. A cluster-admin must explicitly grant it.
 
 The actual attachment won't take place immediately, and the new interface will be available in the guest once the migration is completed.
 

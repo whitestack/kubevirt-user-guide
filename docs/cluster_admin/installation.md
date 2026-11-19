@@ -62,7 +62,7 @@ additional user interaction.
     Here, the host AppArmor profile for `libvirtd` does not allow the
     execution of the `/usr/libexec/qemu-kvm` binary. In the future
     this will hopefully work out of the box
-    ([tracking issue](https://github.com/kubevirt/kubevirt/issues/8744)),
+    (tracking issue),
     but until then there are a couple of possible workarounds.
 
     The first (and simplest) one is to remove the libvirt package
@@ -82,7 +82,7 @@ additional user interaction.
 -   The default AppArmor profile used by the container runtimes usually
     denies `mount` call for the workloads. That may prevent from
     running VMs with [VirtIO-FS](../storage/disks_and_volumes.md#virtio-fs).
-    This is a [known issue](https://github.com/kubevirt/kubevirt/issues/4290).
+    This is a known issue.
     The current workaround is to run such a VM as `unconfined` by adding the
     following annotation to the VM or VMI object:
 
@@ -116,7 +116,7 @@ offers a different set of features than the bundled userland expects can lead to
 device feature-negotiation mismatches. These may only surface later, for example
 as live migration failures where the destination QEMU rejects device state that
 was negotiated on the source
-(see [kubevirt/kubevirt#16386](https://github.com/kubevirt/kubevirt/issues/16386)).
+(see kubevirt/kubevirt#16386).
 
 For the most predictable behaviour, run your nodes on a host kernel aligned with
 the Enterprise Linux userland bundled in `virt-launcher` (for example a current
@@ -145,7 +145,7 @@ on both x86_64 and Arm64 platforms.
     $ kubectl -n kubevirt wait kv kubevirt --for condition=Available
 
 If hardware virtualization is not available, then a
-[software emulation fallback](https://github.com/kubevirt/kubevirt/blob/main/docs/software-emulation.md)
+software emulation fallback
 can be enabled using by setting in the KubeVirt CR `spec.configuration.developerConfiguration.useEmulation` to `true` as follows:
 
     $ kubectl edit -n kubevirt kubevirt kubevirt
@@ -198,8 +198,8 @@ The virtualization extension is automatically enabled when KubeVirt deployment i
 
 You can find KubeVirt in the OKD Service Catalog and install it from
 there. In order to do that please follow the documentation in the
-[KubeVirt APB
-repository](https://github.com/ansibleplaybookbundle/kubevirt-apb).
+KubeVirt APB
+repository.
 
 ## Installing KubeVirt on k3OS
 
@@ -221,7 +221,7 @@ Once nodes are restarted with this configuration, the KubeVirt can be deployed a
 <!-- markdown-link-check-disable -->
 KubeVirt releases daily a developer build from the current main branch. One can see
 when the last release happened by looking at our
-[nightly-build-jobs](https://prow.ci.kubevirt.io/?job=periodic-kubevirt-push-nightly-build-*).
+nightly-build-jobs.
 <!-- markdown-link-check-enable -->
 
 To install the latest developer build, run the following commands:
@@ -238,8 +238,8 @@ To find out which commit this build is based on, run:
 
 ## Deploying from Source
 
-See the [Developer Getting Started
-Guide](https://github.com/kubevirt/kubevirt/blob/main/docs/getting-started.md)
+See the Developer Getting Started
+Guide
 to understand how to build and deploy KubeVirt from source.
 
 ## Installing network plugins (optional)
@@ -248,11 +248,11 @@ KubeVirt alone does not bring any additional network plugins, it just
 allows user to utilize them. If you want to attach your VMs to multiple
 networks (Multus CNI) or have full control over L2 (OVS CNI), you need
 to deploy respective network plugins. For more information, refer to
-[OVS CNI installation
-guide](https://github.com/kubevirt/ovs-cni/blob/main/docs/deployment-on-arbitrary-cluster.md).
+OVS CNI installation
+guide.
 
-> Note: KubeVirt Ansible [network
-> playbook](https://github.com/kubevirt/kubevirt-ansible/tree/master/playbooks#network)
+> Note: KubeVirt Ansible network
+> playbook
 > installs these plugins by default.
 
 ## Restricting KubeVirt components node placement
@@ -267,7 +267,7 @@ cluster nodes by editing the KubeVirt CR:
   field in the KubeVirt CR.
 
 For each of these `.nodePlacement` objects, the `.affinity`, `.nodeSelector` and `.tolerations` sub-fields can be configured.
-See the description in the [API reference](http://kubevirt.io/api-reference/master/definitions.html#_v1_componentconfig)
+See the description in the API reference
 for further information about using these fields.
 
 For example, to restrict the virt-controller and virt-api pods to only run on the control-plane nodes:

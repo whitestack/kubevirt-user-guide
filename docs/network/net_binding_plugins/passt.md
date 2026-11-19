@@ -122,11 +122,11 @@ spec:
 
 #### prior to v1.6.0
 The CNI binary can be retrieved directly from the kubevirt release assets (on GitHub) or to be built from its
-[sources](https://github.com/kubevirt/kubevirt/tree/release-1.1/cmd/cniplugins/passt-binding).
+sources.
 
 > **Note**: The kubevirt project uses Bazel to build the binaries and container images.
 > For more information in how to build the whole project, visit the developer
-> [getting started guide](https://github.com/kubevirt/kubevirt/blob/release-1.1/docs/getting-started.md).
+> getting started guide.
 
 Once the binary is ready, you may rename it to a meaningful name (e.g. `kubevirt-passt-binding`).
 This name is used in the NetworkAttachmentDefinition configuration.
@@ -160,10 +160,10 @@ can access, or, in the same namespace the VMs reside in.
 
 ### Passt sidecar image
 Passt sidecar image is built and pushed to
-[kubevirt quay repository](https://quay.io/repository/kubevirt/network-passt-binding).
+kubevirt quay repository.
 
 The sidecar sources can be found
-[here](https://github.com/kubevirt/kubevirt/tree/release-1.1/cmd/sidecars/network-passt-binding).
+here.
 
 The relevant sidecar image needs to be accessible by the cluster and
 specified in the Kubevirt CR when registering the network binding plugin.

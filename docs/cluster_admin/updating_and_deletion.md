@@ -59,8 +59,8 @@ Newer KubeVirt may require additional or extended RBAC rules. In this
 case, the #1 update method may fail, because the virt-operator present
 in the cluster doesn't have these RBAC rules itself. In this case, you
 need to update the `virt-operator` first, and then proceed to update
-kubevirt. See [this issue for more
-details](https://github.com/kubevirt/kubevirt/issues/2533).
+kubevirt. See this issue for more
+details.
 
 ## Updating KubeVirt Workloads
 

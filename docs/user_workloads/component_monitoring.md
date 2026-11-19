@@ -3,7 +3,7 @@
 All KubeVirt system-components expose Prometheus metrics at their
 `/metrics` REST endpoint.
 
-You can consult the complete and up-to-date metric list at [kubevirt/monitoring](https://github.com/kubevirt/monitoring/blob/main/docs/metrics.md).
+You can consult the complete and up-to-date metric list at kubevirt/monitoring.
 
 ## Custom Service Discovery
 

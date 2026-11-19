@@ -6,7 +6,7 @@ This feature doesn't handle the volume creation or cover migration between stora
 
 If `Migration` is specified as `updateVolumesStrategy`, KubeVirt will try to migrate the storage from the old volume set to the new one when the VirtualMachine spec is updated. The migration considers the changed volumes present into a single update. A single update may contain modifications to more than one volume, but sequential changes to the volume set will be handled as separate migrations.
 
-Updates are declarative and [GitOps](https://kubevirt.io/user-guide/cluster_admin/gitops/) compatible. For example, a new version of the VM specification with the new volume set and the migration volume update strategy can be directly applied using `kubectl apply` or interactively editing the VM with `kubectl edit`
+Updates are declarative and GitOps compatible. For example, a new version of the VM specification with the new volume set and the migration volume update strategy can be directly applied using `kubectl apply` or interactively editing the VM with `kubectl edit`
 
 Example:
 Original VM with a datavolume and datavolume template:

@@ -153,7 +153,7 @@ Policy **VM** (default policy) has the following behaviour:
 - Volumes restored with `VolumeRestorePolicy` **InPlace** as part of `DataVolumes` are restored as PVCs, owned by the DataVolume (because the original DataVolume is rebound to the PVC)
 - Volumes that are PVCs are restored as PVCs and owned by the VM
 
-**Note**: This behaviour is altered by a [bug](https://github.com/kubevirt/kubevirt/issues/12785) where this policy only applies correctly if the VM already exists, but the volumes have been deleted.
+**Note**: This behaviour is altered by a bug where this policy only applies correctly if the VM already exists, but the volumes have been deleted.
 
 Policy **None** has the following behaviour:
 

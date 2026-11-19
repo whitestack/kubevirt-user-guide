@@ -531,26 +531,26 @@ There are two important configuration options associated with stall detection:
   Only meaningful when `allowWorkloadDisruption` is false (the default). The stall detector will try
   for a better downtime than this; if even this budget cannot be met, the migration aborts.
   Configurable on the KubeVirt CR
-  ([MigrationConfiguration](https://kubevirt.io/api-reference/main/definitions.html#_v1_migrationconfiguration))
+  (MigrationConfiguration)
   and on [MigrationPolicy](../cluster_admin/migration_policies.md)
-  ([MigrationPolicySpec](https://kubevirt.io/api-reference/main/definitions.html#_v1alpha1_migrationpolicyspec)).
+  (MigrationPolicySpec).
 - `stallProgressTimeout` (default 40): how many seconds remaining bytes may plateau before the
   migration is considered stalled. Higher values spend more time looking for a better switchover
   point (longer migration, usually better downtime); lower values do the opposite. In alpha this
   lives under `MigrationPolicy.spec.experimental.stallDetector`
-  ([ExperimentalMigrationOptions](https://kubevirt.io/api-reference/main/definitions.html#_v1_experimentalmigrationoptions)).
+  (ExperimentalMigrationOptions).
   At graduation it is expected to repurpose the existing `progressTimeout` field.
 
 Additional stall-detector options are also exposed under
 `MigrationPolicy.spec.experimental.stallDetector` in alpha; see
-[StallDetectorOptions](https://kubevirt.io/api-reference/main/definitions.html#_v1_stalldetectoroptions)
+StallDetectorOptions
 for the full list. Only `stallProgressTimeout` is currently expected to graduate. The rest are
 exposed so the community can try different values if the defaults do not work well for them, and
 report whether there is a real need to keep any of those options exposed. Most of those other fields
 are technically dense and algorithm-specific; for details on what they do, see the
-[StallDetectorOptions](https://kubevirt.io/api-reference/main/definitions.html#_v1_stalldetectoroptions)
+StallDetectorOptions
 API Reference or
-[VEP 248](https://github.com/kubevirt/enhancements/tree/main/veps/sig-compute/248-migration-convergence).
+VEP 248.
 
 `experimental.stallDetector` and `experimental.downtimeTuning` cannot be used on the same policy.
 
@@ -594,16 +594,16 @@ spec:
 There are two important configuration options:
 
 - `maxDowntimeMs` (default 900): the target maximum guest switchover pause in milliseconds. The algorithm ramps QEMU's `max_downtime` toward this value in equal steps; it is a tuning target, not a hard guarantee of observed downtime. Configurable on the KubeVirt CR
-  ([MigrationConfiguration](https://kubevirt.io/api-reference/main/definitions.html#_v1_migrationconfiguration))
+  (MigrationConfiguration)
   and on [MigrationPolicy](../cluster_admin/migration_policies.md)
-  ([MigrationPolicySpec](https://kubevirt.io/api-reference/main/definitions.html#_v1alpha1_migrationpolicyspec)).
+  (MigrationPolicySpec).
 - `downtimeTuning` (activated by presence; defaults below): controls how aggressively `max_downtime` is raised during the migration. In alpha this lives under `MigrationPolicy.spec.experimental`
-  ([DowntimeTuningOptions](https://kubevirt.io/api-reference/main/definitions.html#_v1_downtimetuningoptions)).
+  (DowntimeTuningOptions).
 
-With `downtimeTuning: {}`, the defaults are `initialMs: 150`, `steps: 7`, `startAfterIteration: 3`, `cooldownSeconds: 10`; see [DowntimeTuningOptions](https://kubevirt.io/api-reference/main/definitions.html#_v1_downtimetuningoptions) for what each option does.
+With `downtimeTuning: {}`, the defaults are `initialMs: 150`, `steps: 7`, `startAfterIteration: 3`, `cooldownSeconds: 10`; see DowntimeTuningOptions for what each option does.
 
 For further details refer to
-[VEP 291](https://github.com/kubevirt/enhancements/tree/main/veps/sig-compute/291-dynamic-downtime-tuning).
+VEP 291.
 
 ## Disabling secure migrations
 
@@ -644,7 +644,7 @@ Before a vGPU-backed VMI can live migrate, complete all of the following:
    pick **one** creator so they do not conflict:
    - KubeVirt's [mediated devices configuration](../compute/mediated_devices_configuration.md), which creates mdevs from the types the driver
      exposes.
-   - The NVIDIA GPU Operator [vGPU Device Manager](https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/gpu-operator-kubevirt.html), or another vendor tool that creates mdevs. If an
+   - The NVIDIA GPU Operator vGPU Device Manager, or another vendor tool that creates mdevs. If an
      external plugin owns creation, disable KubeVirt mdev management on those nodes
      (`spec.configuration.mediatedDevicesConfiguration.enabled: false`).
 3. Allowlist the mdev type under `permittedHostDevices.mediatedDevices` and assign it to the VM as
