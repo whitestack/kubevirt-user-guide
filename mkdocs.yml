@@ -1,5 +1,5 @@
-site_name: KubeVirt user guide
-site_url: https://customers.whitestack.com/kubevirt-user-guide/
+site_name: WhiteCruiser Virtualization
+site_url: https://customers.whitestack.com/whitecruiser-virtualization/
 site_description: Documentation for KubeVirt
 docs_dir: docs
 site_dir: site
@@ -106,10 +106,16 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
 
+extra:
+  generator: false
+
 theme:
   name: material
   logo: assets/KubeVirt_icon.png
   favicon: assets/favicon32x32.png
+  font:
+    text: Lato
+    code: Roboto Mono
   palette:
     # Palette toggle for light mode
     - scheme: default

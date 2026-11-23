@@ -1,11 +1,11 @@
 #!/bin/bash
 
 REPO="us-east1-docker.pkg.dev/whitestack-public-docs/whitestack-public-docs"
-NAME="kubevirt-user-guide"
+NAME="whitecruiser-virtualization"
 DOCKERFILE=Dockerfile
 TAG="$(date -u +%Y%m%d-%H%M%S)"
 
-mkdocs build -f mkdocs.yml -d site
+mkdocs build -f mkdocs.yml -d build
 
 docker buildx build --platform linux/amd64 -f "$DOCKERFILE" -t "$REPO/docs-$NAME:$TAG" --push .
 
